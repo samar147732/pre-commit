@@ -1,0 +1,7 @@
+
+-r requirements.txt
+pre-commit
+bandit
+detect-secrets
+pytest
+pip-audit

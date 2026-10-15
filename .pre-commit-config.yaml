@@ -21,3 +21,12 @@ repos:
     hooks:
       - id: detect-secrets
         args: ["--baseline", ".secrets.baseline"]
+
+  - repo: local
+    hooks:
+      - id: pytest
+        name: Tests unitaires
+        entry: pytest -q
+        language: system
+        pass_filenames: false
+        always_run: true
