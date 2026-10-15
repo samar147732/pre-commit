@@ -1,3 +1,4 @@
+
 default_language_version:
   python: python3
 
@@ -27,6 +28,13 @@ repos:
       - id: pytest
         name: Tests unitaires
         entry: pytest -q
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: pip-audit
+        name: Audit des dépendances Python
+        entry: pip-audit -r requirements.txt
         language: system
         pass_filenames: false
         always_run: true
